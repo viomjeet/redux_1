@@ -15,14 +15,10 @@ function App() {
 
       <div className="bg-secondary">
         <div className="container">
-          <h4 className="m-0 pt-3 text-white pb-3 mb-5">React + Redux</h4>
+          <h4 className="m-0 pt-3 text-white pb-3 mb-3">React + Redux</h4>
         </div>
       </div>
-
-
-
       <div className="container">
-
         <div className="row">
           <div className="col-md-6">
             <ul className="ullist">
@@ -36,18 +32,14 @@ function App() {
                   </li>
                 )
               })}
-
             </ul>
           </div>
           <div className="col-md-6">
             <h4>Width : {counter}%</h4>
             <div className="progress_bar">
               <span style={{ width: `${counter}%` }}></span>
-
             </div>
-
             <hr />
-
             <div className="btn-group">
               <button type="button" className="btn btn-success" onClick={() => dispatch(increment(10))}>
                 <i className="fa fa-plus"></i>
