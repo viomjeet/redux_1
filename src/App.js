@@ -11,16 +11,24 @@ function App() {
   const counter = state.todos.counter
   const dispatch = useDispatch();
   return (
-    <div className="container">
-      <header className="App-header">
-        <h4>React + Redux</h4>
-        <hr />
+    <div className="">
+
+      <div className="bg-secondary">
+        <div className="container">
+          <h4 className="m-0 pt-3 text-white pb-3 mb-5">React + Redux</h4>
+        </div>
+      </div>
+
+
+
+      <div className="container">
+
         <div className="row">
           <div className="col-md-6">
             <ul className="ullist">
               {data.map(items => {
                 return (
-                  <li key={items.id} className={items.completed?"bg-success":"bg-secondary"} >
+                  <li key={items.id} className={items.completed ? "bg-gray" : "bg-light"} >
                     <label>
                       <input type="checkbox" value={items.id}
                         onChange={(e) => dispatch(changeCompleted(e.target.value, e.target.checked))} checked={items.completed} />
@@ -33,8 +41,9 @@ function App() {
           </div>
           <div className="col-md-6">
             <h4>Width : {counter}%</h4>
-            <div className="bg-success" style={{ width: `${counter}%` }}>
-              <p>&nbsp;</p>
+            <div className="progress_bar">
+              <span style={{ width: `${counter}%` }}></span>
+
             </div>
 
             <hr />
@@ -49,10 +58,7 @@ function App() {
             </div>
           </div>
         </div>
-
-
-
-      </header>
+      </div>
     </div>
   );
 }
